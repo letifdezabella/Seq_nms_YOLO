@@ -13,7 +13,8 @@ Adaptation made by: Massimo Di Gennaro, Cecilia Diana Albelda, Leticia Fernánde
 
 ## Introduction
 
-![](img/index.jpg) 
+![image](https://user-images.githubusercontent.com/118299602/204146041-c50762b0-e6fd-45cf-a7c8-7d61475d922f.png)
+
 
 This project combines **YOLOv2**([reference](https://arxiv.org/abs/1506.02640)) and **seq-nms**([reference](https://arxiv.org/abs/1602.08465)) to realise **real time video detection**.
 
