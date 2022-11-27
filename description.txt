@@ -1,0 +1,54 @@
+Personal github on: https://github.com/MDG2122/DLVSP_S2
+
+Instructions to run the code:
+
+Follow instructions on: https://github.com/carlosjimenezmwb/seq_nms_yolo, with the following exceptions:
+
+On step 2, run:
+
+source activate EnvExample, instead of: conda activate EnvExample.
+
+On step 3, run:
+
+git clone https://github.com/MDG2122/DLVSP_S2.git, instead of: 
+
+git clone https://github.com/carlosjimenezmwb/seq_nms_yolo.git,
+
+To clone this repository instead of the original one.
+
+Step 7 can be skipped since the videos are already in the folder (unless a different video is going to be tried, in that case, do not skip this step). If you want to select a different video, then change the name of the video. This code provides 5 sample .avi files: input.avi, input2.avi, input3.avi, input4.avi, and input 5.avi. This files correspond, respectively, with the following files in the UCF-101 Dataset: v_ApplyEyeMakeup_g19_c03.avi, v_ApplyLipstick_g21_c01.avi, v_Archery_g07_c01.avi, v_BabyCrawling_g11_c01.avi, v_BalanceBeam_g18_c01.avi”.
+
+On step 8, run:
+
+python video2img.py -i input1.avi, instead of: python video2img.py -i input.mp4. If the input is other than input1.avi, then follow this instructions:
+
+-If the video is a .mp4 file, then the name of the file needs to be filename.mp4, and the command is: python video2img.py -i filename.mp4, filename can be any name assigned to the video.
+
+-If the video is input2.avi, then run: python video2img.py -i input2.avi
+
+-If the video is input3.avi, then run: python video2img.py -i input3.avi
+
+-If the video is input4.avi, then run: python video2img.py -i input4.avi 
+
+-And finally, if the video is input5.avi, then run: python video2img.py -i input5.avi.
+
+Recommendations:
+
+On step 8, the command to move to the video folder is: cd video
+
+On step 10, to return to root folder (/seq_nms_yolo/) use: cd ../
+
+On step 11, run: cd video, to return again to video folder
+
+Yolo without seq_nms:
+
+To remove seq_nms from the tracking algorithm, the following lines of code are removed/commented in yolo_seqnms.py (suggested by  https://github.com/hectordavideps/seq_nms_yolo):
+
+maxPath(dets,links) line 205
+
+NMS(dets) line 206
+
+Then, repeat steps 8 to 11 of instructions on the first Github, to get results without seq_nms.
+
+
+
